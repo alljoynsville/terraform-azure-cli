@@ -4,7 +4,7 @@ MAINTAINER "Nico Lindemann <nico.lindemann@proux.net>"
 # Configure the Terraform version here
 ENV TERRAFORM_VERSION=0.11.2
 
-RUN apk add --update git bash openssh
+RUN apk add --update git bash openssh zip
 
 # install azure cli
 RUN apk update && \
