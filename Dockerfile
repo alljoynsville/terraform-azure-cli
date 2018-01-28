@@ -8,7 +8,7 @@ RUN apk add --update git bash openssh zip
 
 # install azure cli
 RUN apk update && \
-apk add bash py-pip make && \
+apk add bash py-pip make zip && \
 apk add --virtual=build gcc libffi-dev musl-dev openssl-dev python-dev && \
 pip install azure-cli && \
 apk del --purge build
