@@ -10,7 +10,7 @@ RUN apk add --update git bash openssh zip
 RUN apk update && \
 apk add bash py-pip make zip zlib zlib-dev libressl libressl-dev && \
 apk add --virtual=build gcc libffi-dev python-dev musl-dev python-dev && \
-pip install azure-cli && \
+pip install --pre azure-cli --extra-index-url https://azurecliprod.blob.core.windows.net/edge && \
 apk del --purge build
 
 ENV TF_DEV=true
